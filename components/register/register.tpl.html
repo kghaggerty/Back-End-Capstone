@@ -1,6 +1,6 @@
 <div ng-app="authApp">
 
-    <md-content ng-app="authApp" ng-controller="loginController" layout="row" layout-align="space-around" layout-padding="layout-padding" ng-cloak="ng-cloak" class="login-form">
+    <md-content ng-app="authApp" ng-controller="registerController" layout="row" layout-align="space-around" layout-padding="layout-padding" ng-cloak="ng-cloak" class="login-form">
       <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
         <md-toolbar>
           <div class="md-toolbar-tools">
@@ -11,21 +11,28 @@
           <form name="Form">
             <md-input-container class="md-block">
               <label>Username</label>
-              <input type="text" name="email" ng-model="auth.email" placeholder="Enter email here" required=""/>
+              <input type="text" name="email" ng-model="auth.email" placeholder="Email" required=""/>
               <div ng-messages="Form.email.$error" role="alert" multiple="">
                 <div ng-message="required" class="my-message">Please enter your email.</div>
               </div>
             </md-input-container>
             <md-input-container class="md-block">
               <label>Password</label>
-              <input type="password" name="password" ng-model="auth.password" placeholder="Enter password here" required="" md-maxlength="16"/>
+              <input type="password" name="password" ng-model="auth.password" placeholder="Password" required="" md-maxlength="16"/>
               <div ng-messages="Form.password.$error" role="alert" multiple="">
                 <div ng-message="required" class="my-message">Please enter your password.</div>
                 <div ng-message="md-maxlength" class="my-message">Too long.</div>
               </div>
             </md-input-container>
-            <md-button ng-disabled="!Form.$valid" ng-click="submit(auth)" class="md-raised md-primary">&nbsp Login &nbsp</md-button>
-            <md-button ng-click="registerButton()" class="md-raised md-primary">&nbsp Register &nbsp</md-button>
+            <md-input-container class="md-block">
+                <label>First Name</label>
+                <input type="FirstName" name="First Name" ng-model="auth.firstName" placeholder="First Name" required="" md-maxlength="16"/>
+                <div ng-messages="Form.password.$error" role="alert" multiple="">
+                  <div ng-message="required" class="my-message">Please enter your first name.</div>
+                  <div ng-message="md-maxlength" class="my-message">Too long.</div>
+                </div>
+              </md-input-container>
+            <md-button ng-click="register(auth)" class="md-raised md-primary">&nbsp Register &nbsp</md-button>
           </form>
         </md-card-content>
       </md-card>

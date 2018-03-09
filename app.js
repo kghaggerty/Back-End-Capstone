@@ -22,27 +22,10 @@ angular
             templateUrl:'components/login/login.tpl.html',
             controller: 'loginController'
         })
+        .state('/register', {
+            url: '/register',
+            templateUrl:'components/register/register.tpl.html',
+            controller: 'registerController'
+        })
 
 })
-
-// const app = angular.module("authApp", ['ngRoute', 'auth0', 'angular-storage', 'angular-jwt', 'ngMaterial', 'ui.router'])
-
-// angular.module("authApp").config(function ($routeProvider) {
-//     /**
-//      * Configure all Angular application routes here
-//      */
-//     $routeProvider.
-//         when('/components/profile', {
-//             templateUrl: 'components/profile/profile.tpl.html',
-//             contoller: 'profileContoller',
-//         })
-//         .when('/partials/resume', {
-//             templateUrl: 'lib/partials/resume.html',
-//             controller: 'resumeCtrl',
-//         })
-//         .when('/components/login', {
-//             templateUrl: 'components/login/login.tpl.html',
-//             controller: 'loginController',
-//         })
-//         .otherwise('/components/home')
-// })

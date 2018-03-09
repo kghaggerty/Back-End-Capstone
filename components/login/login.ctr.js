@@ -4,9 +4,15 @@ angular.module("authApp")
     $scope.login = function () {
     $location.path('/login')
     
-}
+    }
      $scope.submit = function (auth) {
         $scope.auth = {}
          console.log(auth)
      }
+
+     $scope.registerButton = function () {
+        $location.path('/register')
+        console.log("CLICKKK")
+        
+    }
 })
