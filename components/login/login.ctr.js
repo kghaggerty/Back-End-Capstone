@@ -3,13 +3,10 @@ angular.module("authApp")
 
     $scope.login = function () {
     $location.path('/login')
-    console.log("CLICKKK")
-        form = {
-            formData: {
-                email: $scope.email,
-                password: $scope.password
-            }
-        }
-    }
-
+    
+}
+     $scope.submit = function (auth) {
+        $scope.auth = {}
+         console.log(auth)
+     }
 })
