@@ -1,9 +1,9 @@
 'use strict'
 
 angular
-.module('authApp', ['auth0', 'angular-storage', 'angular-jwt', 'ngMaterial', 'ui.router' ])
+.module('authApp', ['auth0', 'ngMaterial', 'ui.router', 'ngRoute' ])
 
-.config(function ($provide, authProvider, $urlRouterProvider, $stateProvider, $httpProvider, jwtInterceptorProvider) {
+.config(function ($provide, authProvider, $urlRouterProvider, $stateProvider, $httpProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
