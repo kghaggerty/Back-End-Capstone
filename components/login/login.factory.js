@@ -1,26 +1,28 @@
 angular
     .module("authApp")
-    .factory("registerFactory", function ($http, $routeParams) {
+    .factory("loginFactory", function ($http, $routeParams) {
         return Object.create(null, {
-            "postUser": {
+            "loginUser": {
+                value: function (auth) {
+                    return $http({
+                        "url": "http://localhost:5000/api/token",
+                        "method": "GET",
+                        'Accept': 'application/json'
+                    }).then(data => {
+                        console.log(data, "DATA")
+                    })
+                }
+            },
+            "getToken": {
                 value: function (auth) {
                     return $http({
                         "url": "http://localhost:5000/api/token",
                         "method": "POST",
                         'Accept': 'application/json',
-                        "data": auth
+                        'params': auth
                     })
                 }
             }
-            // "editShelterDog": {
-            //     value: function (id, dog) {
-            //         return $http({
-            //             method: "PUT",
-            //             url: `https://frontend-e2cdb.firebaseio.com/dogs/${id}/.json`,
-            //             data: dog
-            //         })
-            //     }
-            // },
             // "getSingleDog": {
             //     value: function (key) {
             //         return $http({

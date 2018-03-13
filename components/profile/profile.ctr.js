@@ -7,6 +7,5 @@
 
     function profileController($http, $scope) {
         
-        $scope.message = "hello"
     }
 })();

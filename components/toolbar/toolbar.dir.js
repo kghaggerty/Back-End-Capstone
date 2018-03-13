@@ -13,8 +13,12 @@
         }
     }
 
-    function toolbarController () {
-        
+    function toolbarController ($scope, $http, $location) {
+        $scope.checkInButton = function () {
+            $location.path('/profile')
+        }
     }
+
+    
 
 })();
