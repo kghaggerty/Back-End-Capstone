@@ -15,4 +15,5 @@
             $location.path('/profile')
         }
     }
+
 })();
