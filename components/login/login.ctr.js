@@ -1,5 +1,5 @@
 angular.module("authApp")
-.controller("loginController", function($scope, $location, loginFactory) {
+.controller("loginController", function($scope, $location, registerFactory) {
 
     $scope.login = function () {
     $location.path('/login')
@@ -9,9 +9,11 @@ angular.module("authApp")
         $location.path('/register')
     }
 
-    $scope.btLogin = function () {
-        loginFactory.getToken($scope.auth).then(function (token){
-            localStorage.setItem("token", token);
+    $scope.btLogin = function (auth) {
+        registerFactory.postUser(auth).then(res => {
+            if (localStorage.getItem("token") !== null){
+                $location.path('/profile')
+            }
         })
     }
 })

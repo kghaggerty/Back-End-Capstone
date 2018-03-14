@@ -1,11 +1,6 @@
-(function() {
-    'use strict'
-
-    angular
-    .module('authApp')
-    .controller('profileController', profileController);
-
-    function profileController($http, $scope) {
-        
-    }
-})();
+angular.module("authApp")
+    .controller("profileController", function ($scope, $location, registerFactory) {
+        $scope.checkIn = function () {
+            $location.path('/checkInForm')
+        }
+    })

@@ -7,54 +7,15 @@ angular
                     return $http({
                         "url": "http://localhost:5000/api/token",
                         "method": "POST",
-                        'Accept': 'application/json',
-                        "data": auth
+                        'Accepts': 'application/json',
+                        'params': auth
+                    }).then(data => {
+                        localStorage.setItem("token", data.data);
+                        console.log("TOKEN", data)
                     })
                 }
             }
-            // "editShelterDog": {
-            //     value: function (id, dog) {
-            //         return $http({
-            //             method: "PUT",
-            //             url: `https://frontend-e2cdb.firebaseio.com/dogs/${id}/.json`,
-            //             data: dog
-            //         })
-            //     }
-            // },
-            // "getSingleDog": {
-            //     value: function (key) {
-            //         return $http({
-            //             method: "GET",
-            //             url: `https://frontend-e2cdb.firebaseio.com/dogs/${key}/.json`
-            //         })
-            //     }
-            // },
-            // "listShelters": {
-            //     value: function (user) {
-            //         return $http({
-            //             method: "GET",
-            //             url: "https://frontend-e2cdb.firebaseio.com/shelter/.json"
-            //         }).then(response => {
-            //             let data = response.data;
-
-            //             let listShelters = Object.keys(data).map(key => {
-            //                 data[key].id = key
-            //                 return data[key]
-            //             })
-
-            //             return listShelters
-            //         })
-            //     }
-            // },
-            // "postHomeDog": {
-            //     value: function (id, dog) {
-            //         dog.home = true
-            //         return $http({
-            //             method: "PUT",
-            //             url: `https://frontend-e2cdb.firebaseio.com/dogs/${id}/.json`,
-            //             data: dog
-            //         })
-            //     }
-            // }    
         })
     })
+
+    // `http://localhost:5000/api/token?firstName=${auth.firstName}&lastName=${auth.lastName}&username=${auth.username}&password=${auth.password}`

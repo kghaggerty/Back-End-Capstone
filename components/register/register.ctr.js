@@ -1,9 +1,9 @@
 angular.module("authApp")
-.controller("registerController", function($scope, $location, registerFactory) {
+    .controller("registerController", function ($scope, $location, registerFactory) {
 
-     $scope.register = function (auth) {
-        registerFactory.postUser(auth).then(res => {
-            $scope.auth = {}
-        })
-     }
-})
+        $scope.register = function (auth) {
+            registerFactory.postUser(auth).then(res => {
+
+            })
+        }
+    })
