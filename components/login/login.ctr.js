@@ -18,7 +18,7 @@ angular.module("authApp")
     }
 
     $scope.logoutButton = function () {
-        console.log("CLICK")
+        console.log("user log out")
         localStorage.removeItem("token")
         $location.path('/home')
     }

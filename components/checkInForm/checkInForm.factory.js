@@ -7,7 +7,8 @@ angular
                     return $http({
                         "url": "http://localhost:5000/api/DailyCheck",
                         "method": "POST",
-                        'data': auth
+                        "Accepts": "application/json",
+                        "data": auth
                     })
                 }
             }

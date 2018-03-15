@@ -14,7 +14,7 @@ angular
             .state('/profile', {
                 url: '/profile',
                 templateUrl: 'components/profile/profile.tpl.html',
-                contoller: 'profileContoller'
+                contoller: 'profileContoller',
             })
             .state('/login', {
                 url: '/login',
