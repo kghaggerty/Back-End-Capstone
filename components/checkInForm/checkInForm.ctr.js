@@ -4,5 +4,6 @@ angular.module("authApp")
         $scope.sendCheckIn = function (auth) {
             checkInFormFactory.postCheckIn(auth).then(res => {
             })
+            $location.path('/feed')
         }
     })

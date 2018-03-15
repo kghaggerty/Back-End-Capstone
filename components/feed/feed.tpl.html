@@ -1,0 +1,17 @@
+<h2> Welcome to your newsfeed. Check in with your friends here.</h2>
+<md-content ng-app="authApp" ng-controller="feedController" layout="row" layout-align="space-around" layout-padding="layout-padding"
+    ng-cloak="ng-cloak" class="feed">
+    <md-card flex="flex" flex-gt-sm="100" flex-gt-md="33">
+    <md-list-item class="md-3-line">
+        <div class="md-list-item-text" layout="column">
+            <p>First Line</p>
+            <p>Second Line</p>
+            <p>Third Line</p>
+        </div>
+    </md-list-item>
+    <md-input-container class="md-block">
+        <textarea type="text" name="feed" id="feed" ng-model="auth.feed" placeholder="" required=""/>
+    </md-input-container>
+    <md-button id="sendFeedBtn" ng-disabled="!Text.$valid" ng-click="" class="md-raised md-primary">&nbsp Post &nbsp</md-button>
+    </md-card>  
+</md-content>

@@ -31,9 +31,13 @@ angular
                 templateUrl: 'components/checkInForm/checkInForm.tpl.html',
                 controller: 'checkInFormController'
             })
+            .state('/feed', {
+                url: '/feed',
+                templateUrl: 'components/feed/feed.tpl.html',
+                controller: 'feedController'
+            })
 
     })
-
 //This runs before all API calls.  
     .factory('httpRequestInterceptor', function () {
         return {
