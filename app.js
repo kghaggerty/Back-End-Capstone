@@ -34,7 +34,7 @@ angular
 
     })
 
-
+//This runs before all API calls.  
     .factory('httpRequestInterceptor', function () {
         return {
             request: function (config) {

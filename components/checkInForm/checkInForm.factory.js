@@ -1,6 +1,7 @@
 angular
     .module("authApp")
     .factory("checkInFormFactory", function ($http, $routeParams) {
+        //Making api call to DailyCheck Controller
         return Object.create(null, {
             "postCheckIn": {
                 value: function (auth) {
