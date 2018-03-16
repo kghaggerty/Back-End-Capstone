@@ -1,16 +1,20 @@
-<h2> Welcome to your newsfeed. Check in with your friends here.</h2>
+<div ng-app="authApp" ng-controller="feedController">
+    <md-toolbar>
+        <div class="md-toolbar-tools">Welcome to your newsfeed. Check in with your friends here.</div>
+    </md-toolbar>
+    <md-content style="height: 400px;" md-scroll-shrink layout="row" layout-align="space-around" layout-padding="layout-padding"
+        ng-cloak="ng-cloak" class="feed">
 
-<md-content ng-app="authApp" ng-controller="feedController" layout="row" layout-align="space-around" layout-padding="layout-padding"
-    ng-cloak="ng-cloak" class="feed">
-    <md-card flex="flex" flex-gt-sm="100" flex-gt-md="33">
-    <md-virtual-repeat class="md-3-line md-virtual-repeat-scroller" role="listitem">
-        <div md-on-demand class="repeated-item" ng-repeat="post in feed.slice().reverse() | limitTo: 7" class="md-virtual-repeat-text" layout="row">
-            <h3>{{ post.text }}</h3>
-        </div>
-    </md-virtual-repeat>
+        <md-list flex="flex sm">
+            <md-virtual-repeat class="md-3-line" role="listitem">
+                <div md-on-demand class="repeated-item" ng-repeat="post in feed.slice().reverse()" class="md-virtual-repeat-text" layout="row">
+                    <h3>{{ post.text }}</h3>
+                </div>
+            </md-virtual-repeat>
+        </md-list>
+    </md-content>
     <md-input-container class="md-block">
-        <textarea type="text" name="feed" id="feed" ng-model="auth.text" placeholder="" required=""/>
+        <textarea type="text" name="feed" id="feed" ng-model="auth.text" placeholder="" required="" />
     </md-input-container>
     <md-button id="sendFeedBtn" ng-click="postFeed(auth)" class="md-raised md-primary">&nbsp Post &nbsp</md-button>
-    </md-card>  
-</md-content>
+</div>
