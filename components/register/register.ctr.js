@@ -3,7 +3,7 @@ angular.module("authApp")
 
         $scope.register = function (auth) {
             registerFactory.postUser(auth).then(res => {
-
             })
+            $location.path('/profile')
         }
     })
