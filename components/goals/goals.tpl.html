@@ -2,9 +2,16 @@
     <h2>My Todo List</h2>
 
     <form ng-submit="todoAdd()">
-        <md-input-container class="md-block">
-        <textarea type="text" name="goals" id="goals" ng-model="auth.goals" placeholder="" required="Enter Goals Here"/>
+        <!-- <md-input-container class="md-block">
+            <textarea type="text" name="goals" id="goals" ng-model="auth.goals" placeholder="" required="Enter Goals Here" />
+        </md-input-container> -->
+        <md-input-container>
+            <label>enter task</label>
+            <input ng-model="auth.goals" type="enter task">
         </md-input-container>
+        <div flex-gt-xs>
+            <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+        </div>
         <md-button class="md-raised md-primary" ng-click="">Add New</md-button>
     </form>
 

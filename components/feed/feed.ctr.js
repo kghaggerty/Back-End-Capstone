@@ -15,8 +15,8 @@ angular.module("authApp")
     //Send news feed form to database
     $scope.postFeed = function (auth) {
         feedFactory.postUserFeed(auth).then(res => {
-            updateFeed();
         })
+        updateFeed();
     }
         
 })
