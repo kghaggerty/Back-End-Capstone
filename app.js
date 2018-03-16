@@ -36,6 +36,11 @@ angular
                 templateUrl: 'components/feed/feed.tpl.html',
                 controller: 'feedController'
             })
+            .state('/goals', {
+                url: '/goals',
+                templateUrl: 'components/goals/goals.tpl.html',
+                controller: 'goalsController'
+            })
 
     })
 //This runs before all API calls.  
