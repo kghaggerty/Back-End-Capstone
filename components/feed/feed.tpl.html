@@ -8,7 +8,7 @@
         <md-list flex="flex sm">
             <md-virtual-repeat class="md-3-line" role="listitem">
                 <div md-on-demand class="repeated-item" ng-repeat="post in feed.slice().reverse()" class="md-virtual-repeat-text" layout="row">
-                    <h3>{{ post.text }}</h3>
+                        <h3>{{ post.user.firstName }}</h3>&nbsp <h3>{{ post.user.lastName }}</h3><h3>:</h3>&nbsp  <h3>{{ post.text }}</h3>
                 </div>
             </md-virtual-repeat>
         </md-list>

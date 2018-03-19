@@ -6,6 +6,7 @@ angular.module("authApp")
         feedFactory.getUserFeed().then(feedData => {
             feedData.data.forEach(eachFeed => {
                 $scope.feed.push(eachFeed)
+                console.log(eachFeed)
             })
         })
     }
