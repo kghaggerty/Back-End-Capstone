@@ -13,6 +13,7 @@
             <md-datepicker ng-model="auth.datedue" md-placeholder="Enter date"></md-datepicker>
         </div>
         <md-button class="md-raised md-primary" ng-click="goalInput(auth)">Add New</md-button>
+        <md-button class="md-raised md-primary" ng-click="updateGoals()">View Current Goals</md-button>
     </form>
 
     <div ng-repeat="x in todoList">
@@ -24,7 +25,7 @@
     <!-- <p>
         <md-button class="md-raised md-primary" ng-click="remove()">Remove marked</md-button>
     </p> -->
-    <md-content class="md-padding right" layout-xs="column" layout="row" ng-repeat="goal in goals">
+    <md-content class="md-padding right" layout-xs="row" layout="row" ng-repeat="goal in goals.slice().reverse()">
             <div flex-xs flex-gt-xs="40" layout="column">
               <md-card>
                 <md-card-title>
