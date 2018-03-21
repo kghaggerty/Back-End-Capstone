@@ -6,7 +6,6 @@ angular.module("authApp")
         feedFactory.getUserFeed().then(feedData => {
             feedData.data.forEach(eachFeed => {
                 $scope.feed.push(eachFeed)
-                console.log(eachFeed)
             })
         })
     }
@@ -16,6 +15,7 @@ angular.module("authApp")
     //Send news feed form to database
     $scope.postFeed = function (auth) {
         feedFactory.postUserFeed(auth).then(res => {
+            $scope.auth = {}
         })
         updateFeed();
     }

@@ -21,6 +21,17 @@ angular
                         "Accepts": "application/json",
                     })
                 }
+            },
+            "completeGoals": {
+                value: function (id, goal) {
+                    goal.isCompleted = true
+                    return $http({
+                        "url": `http://localhost:5000/api/Goals/${id}`,
+                        "method": "PUT",
+                        "Accepts": "application/json",
+                        "data": goal
+                    })
+                }
             }
         })
     })

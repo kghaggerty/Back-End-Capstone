@@ -1,8 +1,8 @@
 <div ng-app="authApp" ng-controller="feedController">
     <md-toolbar>
-        <div class="md-toolbar-tools">Welcome to your newsfeed. Check in with your friends here.</div>
+        <div class="md-toolbar-tools">Check in with your friends here.</div>
     </md-toolbar>
-    <md-content style="height: 400px;" md-scroll-shrink layout="row" layout-align="space-around" layout-padding="layout-padding"
+    <md-content class="feedContent" style="height: 350px;" md-scroll-shrink layout="row" layout-align="space-around" layout-padding="layout-padding"
         ng-cloak="ng-cloak" class="feed">
 
         <md-list flex="flex sm">
@@ -15,6 +15,6 @@
     </md-content>
     <md-input-container class="md-block">
         <textarea type="text" name="feed" id="feed" ng-model="auth.text" placeholder="" required="" />
+        <md-button id="sendFeedBtn" ng-click="postFeed(auth)" class="md-raised md-primary">&nbsp Post &nbsp</md-button>
     </md-input-container>
-    <md-button id="sendFeedBtn" ng-click="postFeed(auth)" class="md-raised md-primary">&nbsp Post &nbsp</md-button>
 </div>

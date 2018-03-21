@@ -1,0 +1,53 @@
+.not-normal {
+    background-color: blue;
+}
+
+.normal {
+    background-color: white; 
+}
+
+.layout-padding {
+    background-image: url("img/mountaintwo.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.loginForm {
+    background-color: rgba(162, 189, 212, 0);
+}
+
+.goalButton {
+    background-color: rgba(196, 209, 219, 0.37);
+}
+
+.feedContent {
+    background-color: rgba(255, 255, 255, 0.527)
+}
+
+.registerContent {
+    background-color: rgba(255, 255, 255, 0.671)
+}
+
+.goalCard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.oneCard {
+    width: 20%;
+}
+
+.falseCard {
+    background-color: rgba(221, 229, 238, 0.712);
+    border: 1px rgba(0, 0, 0, 0.445) solid; 
+}
+
+/* .toolbarHome {
+    background-color: rgb(99, 156, 147);
+    border-bottom: 1px solid black;
+    
+} */
+

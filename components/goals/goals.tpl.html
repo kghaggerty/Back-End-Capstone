@@ -1,6 +1,6 @@
 <div ng-controller="goalsController">
-    <h2>My Todo List</h2>
-    <md-content class="md-padding right" layout-xs="column" layout="row">
+    <h2>My Goals</h2>
+    <md-content class="md-padding right loginForm" layout-xs="column" layout="row">
     <form ng-submit="md-padding">
         <!-- <md-input-container class="md-block">
             <textarea type="text" name="goals" id="goals" ng-model="auth.goals" placeholder="" required="Enter Goals Here" />
@@ -25,22 +25,22 @@
     <!-- <p>
         <md-button class="md-raised md-primary" ng-click="remove()">Remove marked</md-button>
     </p> -->
-    <md-content class="md-padding right" layout-xs="row" layout="row" ng-repeat="goal in goals.slice().reverse()">
-            <div flex-xs flex-gt-xs="40" layout="column">
-              <md-card>
+    <div class="goalCard">
+    <md-content class="md-padding right loginForm oneCard" ng-repeat="goal in goals.slice().reverse()">
+              <md-card ng-class="goal.isCompleted ? 'falseCard' : ''">
                 <md-card-title>
                   <md-card-title-text>
-                    <span class="md-headline">Goal for {{ goal.dateDue }}</span>
-                    <span class="md-subhead">{{ goal.description }}</span>
+                    <span class="md-header">{{ goal.dateDue | date: 'fullDate' }}</span>
+                    <br><span class="md-header">{{ goal.description }}</span>
                   </md-card-title-text>
                   <md-card-title-media>
                     <div class="md-media-lg card-media"></div>
                   </md-card-title-media>
                 </md-card-title>
-                <md-card-actions layout="row" layout-align="end center">
-                  <md-button>Mark Complete</md-button>
+                <md-card-actions class="md-actions" layout="row" layout-align="end center">
+                  <md-button class="goalButton" ng-click="markComplete(goal); isComplete();" id="{{ goal.goalsId }}">Complete</md-button>
                 </md-card-actions>
               </md-card>
             </div>
-    </md-content>
+            </md-content>
 </div>
