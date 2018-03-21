@@ -51,3 +51,9 @@
     
 } */
 
+.goalForm {
+    width: 30%;
+    background-color: rgba(221, 229, 238, 0.774);
+    border: 1px rgba(0, 0, 0, 0.445) solid; 
+}
+
