@@ -16,8 +16,8 @@ angular.module("authApp")
     $scope.postFeed = function (auth) {
         feedFactory.postUserFeed(auth).then(res => {
             $scope.auth = {}
+            updateFeed();
         })
-        updateFeed();
     }
         
 })

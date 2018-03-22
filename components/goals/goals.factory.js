@@ -17,6 +17,7 @@ angular
                 value: function (auth) {
                     return $http({
                         "url": "http://localhost:5000/api/Goals",
+                        // "url": "http://165.227.206.173/api/Goals",
                         "method": "GET",
                         "Accepts": "application/json",
                     })
