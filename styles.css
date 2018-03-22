@@ -58,6 +58,7 @@
 }
 
 .goalHeader {
+
     margin-left: 2%;
     width: 27%;
 }
@@ -65,10 +66,34 @@
 .homeContent {
     background-color: rgba(221, 229, 238, 0.774);
     border: 1px rgba(0, 0, 0, 0.445) solid; 
-    margin-left: 2%;
     height: 300px;
+}
+
+.homeContentTwo {
+    background-color: rgba(221, 229, 238, 0.774);
+    border: 1px rgba(0, 0, 0, 0.445) solid; 
+    height: 100px;
+    padding: 30px;
+    font-size: 1.2em;
 }
 
 .toolbarHome {
     position: static;
+}
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    [class*="goalCard"] {
+    
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    [class*="oneCard"] {
+    
+        width: 100%;
+        
+        }
 }
