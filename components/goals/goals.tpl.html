@@ -1,43 +1,39 @@
 <div ng-controller="goalsController">
-    <h2>My Goals</h2>
+    <h2 class="md-padding right goalHeader" >My Goals</h2>
     <md-content class="md-padding right goalForm" layout-xs="column" layout="row">
-    <form ng-submit="md-padding">
-        <!-- <md-input-container class="md-block">
-            <textarea type="text" name="goals" id="goals" ng-model="auth.goals" placeholder="" required="Enter Goals Here" />
-        </md-input-container> -->
-        <md-input-container>
-            <label>enter task</label>
-            <input ng-model="auth.description" type="enter task">
-        </md-input-container>
-        <div flex-gt-xs>
-            <md-datepicker ng-model="auth.datedue" md-placeholder="Enter date"></md-datepicker>
-        </div>
-        <md-button class="md-raised md-primary" ng-click="goalInput(auth)">Add New</md-button>
-        <md-button class="md-raised md-primary" ng-click="updateGoals()">View Current Goals</md-button>
-    </form>
+        <form ng-submit="md-padding">
+            <md-input-container class="goalInput">
+                <label>enter task</label>
+                <input ng-model="auth.description" type="enter task">
+            </md-input-container>
+            <div flex-gt-xs>
+                <md-datepicker ng-model="auth.datedue" md-placeholder="Enter date"></md-datepicker>
+            </div>
+            <md-button class="md-raised md-primary" ng-click="goalInput(auth)">Add New</md-button>
+            <md-button class="md-raised md-primary" ng-click="updateGoals()">View Current Goals</md-button>
+        </form>
 
-    <div ng-repeat="x in todoList">
-        <input type="checkbox" ng-model="x.done">
-        <span ng-bind="x.todoText"></span>
-    </div>
+        <div ng-repeat="x in todoList">
+            <input type="checkbox" ng-model="x.done">
+            <span ng-bind="x.todoText"></span>
+        </div>
     </md-content>
 
-    <!-- <p>
-        <md-button class="md-raised md-primary" ng-click="remove()">Remove marked</md-button>
-    </p> -->
+    
     <div class="goalCard">
-    <md-content class="md-padding right loginForm oneCard" ng-repeat="goal in goals.slice().reverse()">
-              <md-card ng-class="goal.isCompleted ? 'falseCard' : ''">
+        <md-content class="md-padding right loginForm oneCard" ng-repeat="goal in goals.slice().reverse()">
+            <md-card ng-class="goal.isCompleted ? 'falseCard' : ''">
                 <md-card-title>
-                  <md-card-title-text>
-                    <h3>{{ goal.dateDue | date: 'fullDate' }}</h3>
-                    <br><span class="md-header">{{ goal.description }}</span>
-                  </md-card-title-text>
+                    <md-card-title-text>
+                        <h3>{{ goal.dateDue | date: 'fullDate' }}</h3>
+                        <br>
+                        <span class="md-header">{{ goal.description }}</span>
+                    </md-card-title-text>
                 </md-card-title>
                 <md-card-actions class="md-actions" layout="row" layout-align="end center">
-                  <md-button class="goalButton" ng-click="markComplete(goal); isComplete();" id="{{ goal.goalsId }}">Complete</md-button>
+                    <md-button class="goalButton" ng-click="markComplete(goal); isComplete();" id="{{ goal.goalsId }}">Complete</md-button>
                 </md-card-actions>
-              </md-card>
-            </div>
-            </md-content>
+            </md-card>
+    </div>
+    </md-content>
 </div>

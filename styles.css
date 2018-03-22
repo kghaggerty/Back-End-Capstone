@@ -24,11 +24,12 @@
 }
 
 .feedContent {
-    background-color: rgba(255, 255, 255, 0.527)
+    background-color: rgba(255, 255, 255, 0.616);
+    height: 350px;
 }
 
 .registerContent {
-    background-color: rgba(255, 255, 255, 0.671)
+    background-color: rgba(255, 255, 255, 0.671);
 }
 
 .goalCard {
@@ -45,15 +46,29 @@
     border: 1px rgba(0, 0, 0, 0.445) solid; 
 }
 
-/* .toolbarHome {
-    background-color: rgb(99, 156, 147);
-    border-bottom: 1px solid black;
-    
-} */
-
 .goalForm {
     width: 30%;
     background-color: rgba(221, 229, 238, 0.774);
     border: 1px rgba(0, 0, 0, 0.445) solid; 
+    margin-left: 2%;
 }
 
+.goalInput {
+    left: 20%;
+}
+
+.goalHeader {
+    margin-left: 2%;
+    width: 27%;
+}
+
+.homeContent {
+    background-color: rgba(221, 229, 238, 0.774);
+    border: 1px rgba(0, 0, 0, 0.445) solid; 
+    margin-left: 2%;
+    height: 300px;
+}
+
+.toolbarHome {
+    position: static;
+}
